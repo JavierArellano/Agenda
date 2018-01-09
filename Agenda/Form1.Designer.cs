@@ -23,12 +23,36 @@
         /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.bMostrar = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // bMostrar
+            // 
+            this.bMostrar.Location = new System.Drawing.Point(103, 106);
+            this.bMostrar.Name = "bMostrar";
+            this.bMostrar.Size = new System.Drawing.Size(75, 23);
+            this.bMostrar.TabIndex = 0;
+            this.bMostrar.Text = "Mostrar";
+            this.bMostrar.UseVisualStyleBackColor = true;
+            this.bMostrar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Controls.Add(this.bMostrar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form1";
+            this.Text = "Agenda";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button bMostrar;
     }
 }
 
