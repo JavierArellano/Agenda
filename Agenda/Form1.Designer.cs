@@ -37,7 +37,6 @@
             this.bMostrar.TabIndex = 0;
             this.bMostrar.Text = "Mostrar";
             this.bMostrar.UseVisualStyleBackColor = true;
-            this.bMostrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
