@@ -37,6 +37,11 @@ namespace Agenda {
             MySqlConnection conn = new MySqlConnection(CrearCadenaConexion());
             return conn;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     //Clase contacto
     public class Contacto
