@@ -32,7 +32,7 @@ namespace Agenda {
             return conn;
         }
     }
-
+    //Clase contacto
     public class Contacto
     {
         public Contacto(int id, string nombre, int telefono, string direccion, string email)
@@ -46,6 +46,10 @@ namespace Agenda {
 
         }
         public string nombre { get; set; }
+        public int id { get; }
+        public int telefono { get; set; }
+        public string direccion { get; set; }
+        public string email { get; set; }
 
-    }
+    }    
 }
