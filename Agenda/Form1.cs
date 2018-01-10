@@ -18,6 +18,14 @@ namespace Agenda {
         private void button1_Click(object sender, EventArgs e) {
 
         }
+        public void insert(string nombre, int telefono, string direccion, string email) {
+            MySqlConnection conn = conectar();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "INSERT INTO contactos (nombre,telefono,direccion, email) value ('" + nombre + "'," + telefono + ",'" + direccion + ",'" + email + "')";
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
 
         public String CrearCadenaConexion() {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
