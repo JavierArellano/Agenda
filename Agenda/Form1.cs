@@ -17,5 +17,15 @@ namespace Agenda {
         private void button1_Click(object sender, EventArgs e) {
 
         }
+
+    }
+
+    public class Contacto
+    {
+        public Contacto(int id, string nombre, int telefono, string direccion, string email)
+        {
+            //a
+        }
+
     }
 }
