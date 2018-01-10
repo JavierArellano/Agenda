@@ -7,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Agenda {
     public partial class Form1 : Form {
+        List<Contacto> usuarios = new List<Contacto>();
         public Form1() {
             InitializeComponent();
         }
@@ -17,7 +19,18 @@ namespace Agenda {
         private void button1_Click(object sender, EventArgs e) {
 
         }
-
+        public String CrearCadenaConexion() {
+            MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
+            builder.Server = "localhost";
+            builder.UserID = "java";
+            builder.Password = "java";
+            builder.Database = "interfaz";
+            return builder.ToString();
+        }
+        public MySqlConnection conectar() {
+            MySqlConnection conn = new MySqlConnection(CrearCadenaConexion());
+            return conn;
+        }
     }
 
     public class Contacto
