@@ -21,10 +21,10 @@ namespace Agenda {
 
         public String CrearCadenaConexion() {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.Server = "localhost";
+            builder.Server = "192.168.137.1:3306";
             builder.UserID = "java";
             builder.Password = "java";
-            builder.Database = "interfaz";
+            builder.Database = "agendasharp";
             return builder.ToString();
         }
         public MySqlConnection conectar() {
