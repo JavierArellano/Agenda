@@ -43,8 +43,9 @@ namespace Agenda {
             this.direccion = direccion;
             this.email = email;
 
-        
+
         }
+        public string nombre { get; set; }
 
     }
 }
