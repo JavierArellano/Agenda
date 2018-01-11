@@ -40,7 +40,6 @@ namespace Agenda {
         }
 
         private void insertar_Click(object sender, EventArgs e) {
-            Console.WriteLine("click");
             insert(tNombre.Text,Convert.ToInt32(tTelefono.Text),tDireccion.Text,tEmail.Text);
         }
     }
