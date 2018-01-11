@@ -41,6 +41,11 @@ namespace Agenda {
         private void insertar_Click(object sender, EventArgs e) {
             insert(tNombre.Text,Convert.ToInt32(tTelefono.Text),tDireccion.Text,tEmail.Text);
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     //Clase contacto
     public class Contacto
