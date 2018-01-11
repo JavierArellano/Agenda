@@ -72,7 +72,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(0, 7);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1133, 592);
@@ -84,9 +84,9 @@
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.bMostrar);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1125, 563);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mostrar datos";
@@ -104,9 +104,9 @@
             this.tabPage2.Controls.Add(this.tNombre);
             this.tabPage2.Controls.Add(this.tTelefono);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1125, 563);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Operaciones";
@@ -156,12 +156,13 @@
             // insertar
             // 
             this.insertar.Location = new System.Drawing.Point(100, 235);
-            this.insertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insertar.Margin = new System.Windows.Forms.Padding(4);
             this.insertar.Name = "insertar";
             this.insertar.Size = new System.Drawing.Size(149, 48);
             this.insertar.TabIndex = 13;
             this.insertar.Text = "Insertar";
             this.insertar.UseVisualStyleBackColor = true;
+            this.insertar.Click += new System.EventHandler(this.insertar_Click);
             // 
             // label2
             // 
@@ -176,7 +177,7 @@
             // tDireccion
             // 
             this.tDireccion.Location = new System.Drawing.Point(117, 153);
-            this.tDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.tDireccion.Name = "tDireccion";
             this.tDireccion.Size = new System.Drawing.Size(177, 22);
             this.tDireccion.TabIndex = 3;
@@ -184,7 +185,7 @@
             // tEmail
             // 
             this.tEmail.Location = new System.Drawing.Point(117, 185);
-            this.tEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tEmail.Name = "tEmail";
             this.tEmail.Size = new System.Drawing.Size(177, 22);
             this.tEmail.TabIndex = 4;
@@ -192,7 +193,7 @@
             // tNombre
             // 
             this.tNombre.Location = new System.Drawing.Point(117, 89);
-            this.tNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tNombre.Name = "tNombre";
             this.tNombre.Size = new System.Drawing.Size(177, 22);
             this.tNombre.TabIndex = 1;
@@ -200,7 +201,7 @@
             // tTelefono
             // 
             this.tTelefono.Location = new System.Drawing.Point(117, 121);
-            this.tTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.tTelefono.Name = "tTelefono";
             this.tTelefono.Size = new System.Drawing.Size(177, 22);
             this.tTelefono.TabIndex = 2;
