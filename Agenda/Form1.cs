@@ -22,6 +22,7 @@ namespace Agenda {
             cmd.CommandText = "INSERT INTO contactos (nombre,telefono,direccion, email) value ('" + nombre + "'," + telefono + ",'" + direccion + "','" + email + "')";
             conn.Open();
             cmd.ExecuteNonQuery();
+            Console.WriteLine("insertao");
             conn.Close();
         }
 
@@ -40,12 +41,13 @@ namespace Agenda {
 
         private void insertar_Click(object sender, EventArgs e) {
             insert(tNombre.Text,Convert.ToInt32(tTelefono.Text),tDireccion.Text,tEmail.Text);
+            tNombre.Text = "";
+            tTelefono.Text = "";
+            tDireccion.Text = "";
+            tEmail.Text = "";
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
     //Clase contacto
     public class Contacto
