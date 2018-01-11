@@ -22,6 +22,7 @@ namespace Agenda {
             cmd.CommandText = "INSERT INTO contactos (nombre,telefono,direccion, email) value ('" + nombre + "'," + telefono + ",'" + direccion + "','" + email + "')";
             conn.Open();
             cmd.ExecuteNonQuery();
+            Console.WriteLine("insertao");
             conn.Close();
         }
 
