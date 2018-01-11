@@ -41,10 +41,10 @@
             // 
             // bMostrar
             // 
-            this.bMostrar.Location = new System.Drawing.Point(177, 369);
-            this.bMostrar.Margin = new System.Windows.Forms.Padding(2);
+            this.bMostrar.Location = new System.Drawing.Point(236, 454);
+            this.bMostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bMostrar.Name = "bMostrar";
-            this.bMostrar.Size = new System.Drawing.Size(115, 39);
+            this.bMostrar.Size = new System.Drawing.Size(153, 48);
             this.bMostrar.TabIndex = 0;
             this.bMostrar.Text = "Mostrar";
             this.bMostrar.UseVisualStyleBackColor = true;
@@ -52,100 +52,111 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 11);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 14);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(491, 332);
+            this.dataGridView1.Size = new System.Drawing.Size(655, 409);
             this.dataGridView1.TabIndex = 1;
             // 
             // insertar
             // 
-            this.insertar.Location = new System.Drawing.Point(563, 222);
+            this.insertar.Location = new System.Drawing.Point(751, 273);
+            this.insertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.insertar.Name = "insertar";
-            this.insertar.Size = new System.Drawing.Size(112, 39);
+            this.insertar.Size = new System.Drawing.Size(149, 48);
             this.insertar.TabIndex = 2;
             this.insertar.Text = "Insertar";
             this.insertar.UseVisualStyleBackColor = true;
+            this.insertar.Click += new System.EventHandler(this.insertar_Click);
             // 
             // tDireccion
             // 
-            this.tDireccion.Location = new System.Drawing.Point(576, 155);
+            this.tDireccion.Location = new System.Drawing.Point(768, 191);
+            this.tDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tDireccion.Name = "tDireccion";
-            this.tDireccion.Size = new System.Drawing.Size(134, 20);
+            this.tDireccion.Size = new System.Drawing.Size(177, 22);
             this.tDireccion.TabIndex = 3;
             // 
             // tEmail
             // 
-            this.tEmail.Location = new System.Drawing.Point(576, 181);
+            this.tEmail.Location = new System.Drawing.Point(768, 223);
+            this.tEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tEmail.Name = "tEmail";
-            this.tEmail.Size = new System.Drawing.Size(134, 20);
+            this.tEmail.Size = new System.Drawing.Size(177, 22);
             this.tEmail.TabIndex = 4;
             // 
             // tTelefono
             // 
-            this.tTelefono.Location = new System.Drawing.Point(576, 129);
+            this.tTelefono.Location = new System.Drawing.Point(768, 159);
+            this.tTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tTelefono.Name = "tTelefono";
-            this.tTelefono.Size = new System.Drawing.Size(134, 20);
+            this.tTelefono.Size = new System.Drawing.Size(177, 22);
             this.tTelefono.TabIndex = 6;
             // 
             // tNombre
             // 
-            this.tNombre.Location = new System.Drawing.Point(576, 103);
+            this.tNombre.Location = new System.Drawing.Point(768, 127);
+            this.tNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tNombre.Name = "tNombre";
-            this.tNombre.Size = new System.Drawing.Size(134, 20);
+            this.tNombre.Size = new System.Drawing.Size(177, 22);
             this.tNombre.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label1.Location = new System.Drawing.Point(533, 63);
+            this.label1.Location = new System.Drawing.Point(711, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 25);
+            this.label1.Size = new System.Drawing.Size(190, 30);
             this.label1.TabIndex = 8;
             this.label1.Text = "Añadir contacto";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(523, 106);
+            this.label2.Location = new System.Drawing.Point(697, 130);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(518, 129);
+            this.label3.Location = new System.Drawing.Point(691, 159);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Telefono";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(518, 155);
+            this.label4.Location = new System.Drawing.Point(691, 191);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(67, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Direccion";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(526, 181);
+            this.label5.Location = new System.Drawing.Point(701, 223);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.Size = new System.Drawing.Size(42, 17);
             this.label5.TabIndex = 12;
             this.label5.Text = "Email";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 423);
+            this.ClientSize = new System.Drawing.Size(968, 521);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -159,7 +170,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bMostrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Agenda";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

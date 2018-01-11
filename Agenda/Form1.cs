@@ -37,6 +37,10 @@ namespace Agenda {
             MySqlConnection conn = new MySqlConnection(CrearCadenaConexion());
             return conn;
         }
+
+        private void insertar_Click(object sender, EventArgs e) {
+            insert(tNombre.Text,Convert.ToInt32(tTelefono.Text),tDireccion.Text,tEmail.Text);
+        }
     }
     //Clase contacto
     public class Contacto
