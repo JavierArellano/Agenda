@@ -19,7 +19,7 @@ namespace Agenda {
         public void insert(string nombre, int telefono, string direccion, string email) {
             MySqlConnection conn = conectar();
             MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "INSERT INTO contactos (nombre,telefono,direccion, email) value ('" + nombre + "'," + telefono + ",'" + direccion + ",'" + email + "')";
+            cmd.CommandText = "INSERT INTO contactos (nombre,telefono,direccion, email) value ('" + nombre + "'," + telefono + ",'" + direccion + "','" + email + "')";
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
@@ -27,7 +27,7 @@ namespace Agenda {
 
         public String CrearCadenaConexion() {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.Server = "192.168.137.1:3306";
+            builder.Server = "192.168.137.1";
             builder.UserID = "java";
             builder.Password = "java";
             builder.Database = "agendasharp";
