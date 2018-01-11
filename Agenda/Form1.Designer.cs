@@ -57,6 +57,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(22, 25);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -79,7 +80,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.tabPage1.BackColor = System.Drawing.Color.RoyalBlue;
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.bMostrar);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
