@@ -25,7 +25,7 @@ namespace Agenda {
             conn.Open();
             MySqlDataReader data = cmd.ExecuteReader();
             while (data.Read()) {
-                contactos.Add(new Contacto((int)data["id"], (string)data["nombre"], (int)data["telefono"], (string)data["direccion"], (string)data["email"]));
+                contactos.Add(new Contacto((string)data["nombre"], (int)data["telefono"], (string)data["direccion"], (string)data["email"]));
             }
             conn.Close();
             dataGridView1.DataSource = contactos;
@@ -39,7 +39,8 @@ namespace Agenda {
             cmd.ExecuteNonQuery();
             Console.WriteLine("insertao");
             conn.Close();
-            contactos.Add(new Contacto(contactos.Count, nombre, telefono, direccion, email));
+            contactos.Add(new Contacto(nombre, telefono, direccion, email));
+            //dataGridView1.Update();
             dataGridView1.DataSource = "";
             dataGridView1.DataSource = contactos;
         }
@@ -66,26 +67,24 @@ namespace Agenda {
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) {
-            Bnom.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            Mnom2.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            Mtel.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            Mdir.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            Memail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            Bnom.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            Mnom2.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            Mtel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Mdir.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            Memail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
     }
     //Clase contacto
     public class Contacto
     {
-        public Contacto(int id, string nombre, int telefono, string direccion, string email)
+        public Contacto(string nombre, int telefono, string direccion, string email)
         {
-            this.id = id;
             this.nombre = nombre;
             this.telefono = telefono;
             this.direccion = direccion;
             this.email = email;
         }
         public string nombre { get; set; }
-        public int id { get; }
         public int telefono { get; set; }
         public string direccion { get; set; }
         public string email { get; set; }
