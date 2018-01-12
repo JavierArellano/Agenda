@@ -104,10 +104,11 @@ namespace Agenda {
         private void button2_Click(object sender, EventArgs e)
         {
             delete();
-            //tNombre.Text = "";
-            //tTelefono.Text = "";
-            //tDireccion.Text = "";
-            //tEmail.Text = "";
+            Mnom2.Text = "";
+            Mtel.Text = "";
+            Mdir.Text = "";
+            Memail.Text = "";
+            Bnom.Text = "";
             MessageBox.Show("Se ha borrado correctamente", "Contacto borrado", MessageBoxButtons.OK);
         }
         private void button3_Click(object sender, EventArgs e) {
