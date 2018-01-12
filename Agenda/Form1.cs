@@ -100,6 +100,7 @@ namespace Agenda {
             Memail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
 
+
         private void button2_Click(object sender, EventArgs e)
         {
             delete();
@@ -108,6 +109,14 @@ namespace Agenda {
             //tDireccion.Text = "";
             //tEmail.Text = "";
             MessageBox.Show("Se ha borrado correctamente", "Contacto borrado", MessageBoxButtons.OK);
+        }
+        private void button3_Click(object sender, EventArgs e) {
+            update();
+            Mnom2.Text = "";
+            Mtel.Text = "";
+            Mdir.Text = "";
+            Memail.Text = "";
+            Bnom.Text = "";
         }
     }
     //Clase contacto
