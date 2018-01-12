@@ -19,6 +19,7 @@ namespace Agenda {
         }
 
         public void select() {
+            dataGridView1.DataSource = "";
             MySqlConnection conn = conectar();
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = "Select * from contactos ORDER BY nombre";
@@ -43,6 +44,9 @@ namespace Agenda {
             //dataGridView1.Update();
             dataGridView1.DataSource = "";
             dataGridView1.DataSource = contactos;
+        }
+        public void delete() {
+
         }
 
         public String CrearCadenaConexion() {
