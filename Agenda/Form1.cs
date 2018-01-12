@@ -49,6 +49,22 @@ namespace Agenda {
 
         }
 
+
+        //Funcion modificar contacto
+        public void update()
+        {
+            MySqlConnection conn = conectar();
+            MySqlCommand cmd = conn.CreateCommand();
+
+            cmd.CommandText = "UPDATE contactos SET nombre = '" + Mnom2.Text + "', telefono = " + Mtel.Text + ", direccion = '" + Mdir.Text + "', email = '" + Memail.Text 
+                + "' WHERE contactos.nombre ='" +  Bnom.Text + "';";
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            select();
+        }
+
         public String CrearCadenaConexion() {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
             builder.Server = "192.168.137.1";
