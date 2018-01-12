@@ -11,10 +11,25 @@ using MySql.Data.MySqlClient;
 
 namespace Agenda {
     public partial class Form1 : Form {
+        List<Contacto> contactos = new List<Contacto>();
+
         public Form1() {
             InitializeComponent();
+            select();
         }
 
+        public void select() {
+            MySqlConnection conn = conectar();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "Select * from contactos ORDER BY nombre";
+            conn.Open();
+            MySqlDataReader data = cmd.ExecuteReader();
+            while (data.Read()) {
+                contactos.Add(new Contacto((int)data["id"], (string)data["nombre"], (int)data["telefono"], (string)data["direccion"], (string)data["email"]));
+            }
+            conn.Close();
+            dataGridView1.DataSource = contactos;
+        }
         
         public void insert(string nombre, int telefono, string direccion, string email) {
             MySqlConnection conn = conectar();
@@ -24,6 +39,9 @@ namespace Agenda {
             cmd.ExecuteNonQuery();
             Console.WriteLine("insertao");
             conn.Close();
+            contactos.Add(new Contacto(contactos.Count, nombre, telefono, direccion, email));
+            dataGridView1.DataSource = "";
+            dataGridView1.DataSource = contactos;
         }
 
         public String CrearCadenaConexion() {
