@@ -129,15 +129,17 @@ namespace Agenda {
     //Clase contacto
     public class Contacto
     {
-        public Contacto(string nombre, int telefono, string direccion, string email)
+        public Contacto(string nombre, int edad, int telefono, string direccion, string email)
         {
             this.nombre = nombre;
             this.telefono = telefono;
+            this.edad = edad;
             this.direccion = direccion;
             this.email = email;
         }
         public string nombre { get; set; }
         public int telefono { get; set; }
+        public int edad { get; set; }
         public string direccion { get; set; }
         public string email { get; set; }
 
