@@ -25,6 +25,7 @@ namespace Agenda {
             cmd.CommandText = "Select * from contactos ORDER BY nombre";
             conn.Open();
             MySqlDataReader data = cmd.ExecuteReader();
+            contactos.Clear();
             while (data.Read()) {
                 contactos.Add(new Contacto((string)data["nombre"], (int)data["telefono"], (string)data["direccion"], (string)data["email"]));
             }
@@ -95,8 +96,8 @@ namespace Agenda {
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) {
             Bnom.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             Mnom2.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            Mtel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            Mdir.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            Mtel.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            Mdir.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             Memail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
 
