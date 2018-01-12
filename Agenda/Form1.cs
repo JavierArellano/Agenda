@@ -27,20 +27,20 @@ namespace Agenda {
             MySqlDataReader data = cmd.ExecuteReader();
             contactos.Clear();
             while (data.Read()) {
-                contactos.Add(new Contacto((string)data["nombre"], (int)data["telefono"], (string)data["direccion"], (string)data["email"]));
+                contactos.Add(new Contacto((string)data["nombre"], (int) data["edad"], (int)data["telefono"], (string)data["direccion"], (string)data["email"]));
             }
             conn.Close();
             dataGridView1.DataSource = contactos;
         }
         
-        public void insert(string nombre, int telefono, string direccion, string email) {
+        public void insert(string nombre, int edad, int telefono, string direccion, string email) {
             MySqlConnection conn = conectar();
             MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "INSERT INTO contactos (nombre,telefono,direccion, email) value ('" + nombre + "'," + telefono + ",'" + direccion + "','" + email + "')";
+            cmd.CommandText = "INSERT INTO contactos (nombre,telefono,direccion, email) value ('" + nombre + "'," + edad + "," + telefono + ",'" + direccion + "','" + email + "')";
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
-            contactos.Add(new Contacto(nombre, telefono, direccion, email));
+            contactos.Add(new Contacto(nombre, edad, telefono, direccion, email));
             dataGridView1.DataSource = "";
             dataGridView1.DataSource = contactos;
         }
@@ -62,7 +62,7 @@ namespace Agenda {
             MySqlConnection conn = conectar();
             MySqlCommand cmd = conn.CreateCommand();
 
-            cmd.CommandText = "UPDATE contactos SET nombre = '" + Mnom2.Text + "', telefono = " + Mtel.Text + ", direccion = '" + Mdir.Text + "', email = '" + Memail.Text 
+            cmd.CommandText = "UPDATE contactos SET nombre = '" + Mnom2.Text + "', edad = " + Medad.Text + ", telefono = " + Mtel.Text + ", direccion = '" + Mdir.Text + "', email = '" + Memail.Text 
                 + "' WHERE contactos.nombre ='" +  Bnom.Text + "';";
 
             conn.Open();
@@ -86,8 +86,9 @@ namespace Agenda {
 
         //Insertar
         private void insertar_Click(object sender, EventArgs e) {
-            insert(tNombre.Text,Convert.ToInt32(tTelefono.Text),tDireccion.Text,tEmail.Text);
+            insert(tNombre.Text, Convert.ToInt32(tEdad.Text), Convert.ToInt32(tTelefono.Text),tDireccion.Text,tEmail.Text);
             tNombre.Text = "";
+            tEdad.Text = "";
             tTelefono.Text = "";
             tDireccion.Text = "";
             tEmail.Text = "";
