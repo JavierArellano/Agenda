@@ -27,11 +27,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bMostrar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -65,12 +60,20 @@
             this.tEdad = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Medad = new System.Windows.Forms.TextBox();
+            this.contactoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.contactoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactoBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bMostrar
@@ -91,10 +94,11 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreDataGridViewTextBoxColumn,
+            this.edad,
             this.direccionDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.contactoBindingSource;
+            this.dataGridView1.DataSource = this.contactoBindingSource1;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(21, 25);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -102,35 +106,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1053, 404);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "telefono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // contactoBindingSource
-            // 
-            this.contactoBindingSource.AllowNew = true;
-            this.contactoBindingSource.DataSource = typeof(Agenda.Contacto);
             // 
             // tabControl1
             // 
@@ -471,6 +446,45 @@
             this.Medad.Size = new System.Drawing.Size(135, 22);
             this.Medad.TabIndex = 53;
             // 
+            // contactoBindingSource1
+            // 
+            this.contactoBindingSource1.DataSource = typeof(Agenda.Contacto);
+            // 
+            // contactoBindingSource
+            // 
+            this.contactoBindingSource.AllowNew = true;
+            this.contactoBindingSource.DataSource = typeof(Agenda.Contacto);
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // edad
+            // 
+            this.edad.DataPropertyName = "edad";
+            this.edad.HeaderText = "edad";
+            this.edad.Name = "edad";
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -482,12 +496,13 @@
             this.Name = "Form1";
             this.Text = "Agenda";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactoBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -527,14 +542,16 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource contactoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tEdad;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox Medad;
+        private System.Windows.Forms.BindingSource contactoBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn edad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
     }
 }
 

@@ -98,9 +98,10 @@ namespace Agenda {
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) {
             Bnom.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             Mnom2.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            Mtel.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            Mdir.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            Memail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            Medad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Mtel.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            Mdir.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            Memail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
         //Borrar
@@ -109,6 +110,7 @@ namespace Agenda {
             delete();
             Mnom2.Text = "";
             Mtel.Text = "";
+            Medad.Text = "";
             Mdir.Text = "";
             Memail.Text = "";
             Bnom.Text = "";
@@ -120,6 +122,7 @@ namespace Agenda {
             update();
             Mnom2.Text = "";
             Mtel.Text = "";
+            Medad.Text = "";
             Mdir.Text = "";
             Memail.Text = "";
             Bnom.Text = "";
