@@ -46,7 +46,13 @@ namespace Agenda {
             dataGridView1.DataSource = contactos;
         }
         public void delete() {
-
+            MySqlConnection conn = conectar();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "Delete from contactos where contactos.nombre='"+Bnom.Text+"';";
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            select();
         }
 
 
