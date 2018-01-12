@@ -39,13 +39,12 @@ namespace Agenda {
             cmd.CommandText = "INSERT INTO contactos (nombre,telefono,direccion, email) value ('" + nombre + "'," + telefono + ",'" + direccion + "','" + email + "')";
             conn.Open();
             cmd.ExecuteNonQuery();
-            Console.WriteLine("insertao");
             conn.Close();
             contactos.Add(new Contacto(nombre, telefono, direccion, email));
-            //dataGridView1.Update();
             dataGridView1.DataSource = "";
             dataGridView1.DataSource = contactos;
         }
+
         public void delete() {
             MySqlConnection conn = conectar();
             MySqlCommand cmd = conn.CreateCommand();
@@ -85,12 +84,14 @@ namespace Agenda {
             return conn;
         }
 
+        //Insertar
         private void insertar_Click(object sender, EventArgs e) {
             insert(tNombre.Text,Convert.ToInt32(tTelefono.Text),tDireccion.Text,tEmail.Text);
             tNombre.Text = "";
             tTelefono.Text = "";
             tDireccion.Text = "";
             tEmail.Text = "";
+            MessageBox.Show("Se ha insertado correctamente", "Contacto creado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) {
@@ -101,7 +102,7 @@ namespace Agenda {
             Memail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
 
-
+        //Borrar
         private void button2_Click(object sender, EventArgs e)
         {
             delete();
@@ -110,8 +111,10 @@ namespace Agenda {
             Mdir.Text = "";
             Memail.Text = "";
             Bnom.Text = "";
-            MessageBox.Show("Se ha borrado correctamente", "Contacto borrado", MessageBoxButtons.OK);
+            MessageBox.Show("Se ha borrado correctamente", "Contacto borrado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
+
+        //Modificar
         private void button3_Click(object sender, EventArgs e) {
             update();
             Mnom2.Text = "";
@@ -119,6 +122,7 @@ namespace Agenda {
             Mdir.Text = "";
             Memail.Text = "";
             Bnom.Text = "";
+            MessageBox.Show("Se ha modificado correctamente", "Contacto modificado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
     //Clase contacto
