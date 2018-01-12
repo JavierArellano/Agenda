@@ -99,6 +99,15 @@ namespace Agenda {
             Mdir.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             Memail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
+
+        private void button3_Click(object sender, EventArgs e) {
+            update();
+            Mnom2.Text = "";
+            Mtel.Text = "";
+            Mdir.Text = "";
+            Memail.Text = "";
+            Bnom.Text = "";
+        }
     }
     //Clase contacto
     public class Contacto
