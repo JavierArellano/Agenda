@@ -44,7 +44,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Bnom = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -145,7 +145,7 @@
             this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.textBox7);
+            this.tabPage2.Controls.Add(this.Bnom);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
@@ -293,13 +293,13 @@
             this.label15.TabIndex = 39;
             this.label15.Text = "Nombre";
             // 
-            // textBox7
+            // Bnom
             // 
-            this.textBox7.Location = new System.Drawing.Point(864, 191);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(135, 22);
-            this.textBox7.TabIndex = 37;
+            this.Bnom.Location = new System.Drawing.Point(864, 191);
+            this.Bnom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Bnom.Name = "Bnom";
+            this.Bnom.Size = new System.Drawing.Size(135, 22);
+            this.Bnom.TabIndex = 37;
             // 
             // label8
             // 
@@ -476,7 +476,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox Bnom;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button3;
