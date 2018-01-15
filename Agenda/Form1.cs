@@ -36,7 +36,7 @@ namespace Agenda {
         public void insert(string nombre, int edad, int telefono, string direccion, string email) {
             MySqlConnection conn = conectar();
             MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "INSERT INTO contactos (nombre,telefono,direccion, email) value ('" + nombre + "'," + edad + "," + telefono + ",'" + direccion + "','" + email + "')";
+            cmd.CommandText = "INSERT INTO contactos (nombre, edad,telefono,direccion, email) value ('" + nombre + "'," + edad + "," + telefono + ",'" + direccion + "','" + email + "')";
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
