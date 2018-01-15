@@ -60,20 +60,18 @@
             this.tEdad = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Medad = new System.Windows.Forms.TextBox();
-            this.contactoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.contactoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bMostrar
@@ -446,26 +444,17 @@
             this.Medad.Size = new System.Drawing.Size(135, 22);
             this.Medad.TabIndex = 53;
             // 
-            // contactoBindingSource1
+            // edad
             // 
-            this.contactoBindingSource1.DataSource = typeof(Agenda.Contacto);
-            // 
-            // contactoBindingSource
-            // 
-            this.contactoBindingSource.AllowNew = true;
-            this.contactoBindingSource.DataSource = typeof(Agenda.Contacto);
+            this.edad.DataPropertyName = "edad";
+            this.edad.HeaderText = "edad";
+            this.edad.Name = "edad";
             // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // edad
-            // 
-            this.edad.DataPropertyName = "edad";
-            this.edad.HeaderText = "edad";
-            this.edad.Name = "edad";
             // 
             // direccionDataGridViewTextBoxColumn
             // 
@@ -485,6 +474,10 @@
             this.emailDataGridViewTextBoxColumn.HeaderText = "email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
+            // contactoBindingSource1
+            // 
+            this.contactoBindingSource1.DataSource = typeof(Agenda.Contacto);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -502,7 +495,6 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -540,7 +532,6 @@
         private System.Windows.Forms.TextBox Mnom2;
         private System.Windows.Forms.TextBox Mtel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.BindingSource contactoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tEdad;
