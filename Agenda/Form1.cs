@@ -15,11 +15,13 @@ namespace Agenda {
 
         public Form1() {
             InitializeComponent();
+            Contacto.chart_ = chart1;
+            chart1.Series.Add("edad").YValueMembers = "edad";
+            chart1.Series["edad"].XValueMember = "nombre";
             select();
         }
 
         public void select() {
-            dataGridView1.DataSource = "";
             MySqlConnection conn = conectar();
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = "Select * from contactos ORDER BY nombre";
@@ -30,9 +32,14 @@ namespace Agenda {
                 contactos.Add(new Contacto((string)data["nombre"], (int) data["edad"], (int)data["telefono"], (string)data["direccion"], (string)data["email"]));
             }
             conn.Close();
-            dataGridView1.DataSource = contactos;
+            cargarDatos();
         }
-        
+        public void cargarDatos() {
+            dataGridView1.DataSource = "";
+            dataGridView1.DataSource = contactos;
+            chart1.DataSource = contactos;
+            chart1.DataBind();
+        }
         public void insert(string nombre, int edad, int telefono, string direccion, string email) {
             MySqlConnection conn = conectar();
             MySqlCommand cmd = conn.CreateCommand();
@@ -41,8 +48,7 @@ namespace Agenda {
             cmd.ExecuteNonQuery();
             conn.Close();
             contactos.Add(new Contacto(nombre, edad, telefono, direccion, email));
-            dataGridView1.DataSource = "";
-            dataGridView1.DataSource = contactos;
+            cargarDatos();
         }
 
         public void delete() {
@@ -140,6 +146,7 @@ namespace Agenda {
             this.direccion = direccion;
             this.email = email;
         }
+        public static System.Windows.Forms.DataVisualization.Charting.Chart chart_ { get; set; }
         public string nombre { get; set; }
         public int telefono { get; set; }
         public int edad { get; set; }
