@@ -39,6 +39,38 @@ namespace Agenda {
             dataGridView1.DataSource = contactos;
             chart1.DataSource = contactos;
             chart1.DataBind();
+            ToDataTable<Contacto>(contactos);
+            
+            this.reportViewer1.RefreshReport();
+        }
+        public DataTable ToDataTable<Contacto>(IEnumerable<Contacto> collection) {
+            DataTable dt = dataSet1.Tables.Add("contactos");
+            //DataTable dt = new DataTable("DataTable");
+            Type t = typeof(Contacto);
+            System.Reflection.PropertyInfo[] pia = t.GetProperties();
+
+            //Inspect the properties and create the columns in the DataTable
+            foreach (System.Reflection.PropertyInfo pi in pia) {
+                Type ColumnType = pi.PropertyType;
+                if ((ColumnType.IsGenericType)) {
+                    ColumnType = ColumnType.GetGenericArguments()[0];
+                }
+                dt.Columns.Add(pi.Name, ColumnType);
+            }
+
+            //Populate the data table
+            foreach (Contacto item in collection) {
+                DataRow dr = dt.NewRow();
+                dr.BeginEdit();
+                foreach (System.Reflection.PropertyInfo pi in pia) {
+                    if (pi.GetValue(item, null) != null) {
+                        dr[pi.Name] = pi.GetValue(item, null);
+                    }
+                }
+                dr.EndEdit();
+                dt.Rows.Add(dr);
+            }
+            return dt;
         }
         public void insert(string nombre, int edad, int telefono, string direccion, string email) {
             MySqlConnection conn = conectar();
@@ -133,6 +165,13 @@ namespace Agenda {
             Memail.Text = "";
             Bnom.Text = "";
             MessageBox.Show("Se ha modificado correctamente", "Contacto modificado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void Form1_Load(object sender, EventArgs e) {
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e) {
+
         }
     }
     //Clase contacto
